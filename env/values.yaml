@@ -21,3 +21,14 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
+wkpython:
+  postgresql:
+    replication:
+      enabled: true
+      synchronousCommit: "on"
+      numSynchronousReplicas: 1
+    metrics:
+      enabled: false
+    persistence:
+      size: 100Gi
+    postgresqlDatabase: whodb.staging
